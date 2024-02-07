@@ -2,7 +2,7 @@
 
 When running hw1.cpp, please choose a number between (1-6). No letters or special letters!
 
-When deciding to end the loop, choose input 6 to close the loop. 
+hw1.cpp runs a menu of which the user must decide on 5 options. Each of these options utilize shell commands by using the system() function. This code presents new shell commands to learn from and 
 
 There are 5 commands used in this source file:
 
@@ -16,4 +16,8 @@ There are 5 commands used in this source file:
 
 "type" command pulls a file from your system's files and displays it's contents to the terminal. 
 
-It is important to create exceptions on each case (1-6), because the user may 
+When deciding to end the loop, choose input 6 to close the loop. 
+
+It is important to create exceptions on each case (1-6), because the user may input an incorrect value and have a random output. The exception handle will clarify an error happened.
+
+Note: The porfessor informed to note that hw1.cpp failed to properly run the code in Visual Studio Code. It would run the menu's function (Choices 1-6) once, but the menu would not load again. Instead, it would freeze. However, if the code would run in an online compiler, the menu would run recursively and operate within its expectations.
