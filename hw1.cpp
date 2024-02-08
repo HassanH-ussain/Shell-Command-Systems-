@@ -28,18 +28,37 @@ int main() {
             case 2: //each of these cases are enabled by the user's integer input (int choice)
                 system("cd");   //"cd" is a command that prints the system's working directory
                 break;  //break out of the switch case after the command. This will return to the do while() loop
-            case 3: //each of these cases are enabled by the user's integer input (int choice)
-                system("mkdir new_folder"); //"mkdir" is a command that creates a new directory in your system's files
+            case 3:{ //each of these cases are enabled by the user's integer input (int choice)
+                int mkDir = system("mkdir new_folder"); //"mkdir" is a command that creates a new directory in your system's files
+                if (mkDir != 0) {
+				std::cerr << "The directory already exists." << std::endl;
+                }		//if the directory already exists, print out an error handler message to the user
+            int delDir = system("rmdir /s /q old_folder");						//delete the old folder to be replaced by the new folder
+			if (delDir != 0)													//if there is a directory with that name which can't be deleted
+			{
+				std::cerr << "The directory cannot be deleted." << std::endl;	//print out an error handler if the directory needs special permissions to be deleted
+			}
                 break;  //break out of the switch case after the command. This will return to the do while() loop
-            case 4: //each of these cases are enabled by the user's integer input (int choice)
-                system("echo Hello people");    //"echo" is a command that displays a message to the user. For example, "echo x" prints out x in the terminal
+            }
+            case 4:
+             {//each of these cases are enabled by the user's integer input (int choice)
+                int PrintMessage = system("echo Hello people");    //"echo" is a command that displays a message to the user. For example, "echo x" prints out x in the terminal
+                if(PrintMessage != 0){
+                    cerr << "Error! Print command failed!" << endl;
+                }
                 break;  //break out of the switch case after the command. This will return to the do while() loop
-            case 5: //each of these cases are enabled by the user's integer input (int choice)
-                system("type Program.txt"); //"type" command pulls a file from your system's files and displays it's contents to the terminal. For example, a text file in your hardrive will have it's words and content printed out to the terminal
+            }
+            case 5:{ //each of these cases are enabled by the user's integer input (int choice)
+                int Concat = system("type Program.txt"); //"type" command pulls a file from your system's files and displays it's contents to the terminal. For example, a text file in your hardrive will have it's words and content printed out to the terminal
+                if(Concat != 0){
+                    cerr << "Error! File was not found or could not open its content!" << endl;
+                }
                 break;  //break out of the switch case after the command. This will return to the do while() loop
-            case 6: //each of these cases are enabled by the user's integer input (int choice)
+            }
+            case 6:{ //each of these cases are enabled by the user's integer input (int choice)
                 cout << "Exiting the program." << endl; //displays a message to the terminal stating that the program is exiting
                 break;  //break out of the switch case after the command. This will return to the do while() loop
+            }
             default: //default is similar to an exception handler. If the user's input is not between 1-6 or is not a number, it will print out the message from this case. It is also like an else() on a if() statement. 
                 cout << "Invalid choice. Please enter a number from 1 to 6." << endl; //displays a warning that the user did not print out a correct number
                 break;  //break out of the switch case after the command. This will return to the do while() loop
