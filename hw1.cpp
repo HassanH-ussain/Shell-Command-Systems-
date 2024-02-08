@@ -3,10 +3,10 @@
 //School Institution: Wichita State University
 //Github Repository: https://github.com/HassanH-ussain/Shell-Command-Systems-.git
 //Title: Homework 1 - Shell Commands
-#include <iostream>
-#include <string>
-
-using namespace std;
+#include <iostream> //Include input and output stream functions library
+#include <string> //Include string functions library
+#include <cstdlib> // Include the C Standard Library for system() functions library
+using namespace std; //simplifies code from std:: and more
 
 void displayMenu() {    //displayMenu() prints out a menu for the user to choose a decision
     cout << "Example Menu:" << endl;
