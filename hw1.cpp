@@ -1,3 +1,8 @@
+//Hassan Hussain
+//Class: Operating Systems
+//School Institution: Wichita State University
+//Github Repository: https://github.com/HassanH-ussain/Shell-Command-Systems-.git
+//Title: Homework 1 - Shell Commands
 #include <iostream>
 #include <string>
 
@@ -44,14 +49,14 @@ int main() {
              {//each of these cases are enabled by the user's integer input (int choice)
                 int PrintMessage = system("echo Hello people");    //"echo" is a command that displays a message to the user. For example, "echo x" prints out x in the terminal
                 if(PrintMessage != 0){
-                    cerr << "Error! Print command failed!" << endl;
+                    cerr << "Error! Print command failed!" << endl; //If the command fails to print message, print error message
                 }
                 break;  //break out of the switch case after the command. This will return to the do while() loop
             }
             case 5:{ //each of these cases are enabled by the user's integer input (int choice)
                 int Concat = system("type Program.txt"); //"type" command pulls a file from your system's files and displays it's contents to the terminal. For example, a text file in your hardrive will have it's words and content printed out to the terminal
                 if(Concat != 0){
-                    cerr << "Error! File was not found or could not open its content!" << endl;
+                    cerr << "Error! File was not found or could not open its content!" << endl; //If file could not be found, print error message
                 }
                 break;  //break out of the switch case after the command. This will return to the do while() loop
             }
