@@ -1,4 +1,4 @@
-# Assignment 1: Shell-Command-Systems-
+# Assignment 1: Shell-Command-Systems
 
 When running hw1.cpp, please choose a number between (1-6). No letters or special letters!
 
